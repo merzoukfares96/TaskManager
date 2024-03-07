@@ -1,27 +1,8 @@
-# AngularTest
+# Task manager application
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0. It contains a simple friendly user web application for task management purposes. It shows a friendly sober design and a funny user interface. You can create, edit and delete tasks. Each task has a title, subtasks and a priority for ordering. The tasks will be displayed in three different colors depending on their priority. Between subtasks, you should put a ", " so the code can recognize each subtask independently.
+The web application was made in french, so sorry in advance for non french users even though there is not much in it that is not explained in this document.
+The code answers to most of the web developper rules such as components, interfaces for typing objects and a correct enough architecture.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+## Instructions
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Make sure you have `node.js` installed in your device. Run first `npm install` so you can install all the dependencies and libraries needed in the project then launch the server with `ng serve` to launch on dev mode. Navigate to `http://localhost:4200/` on your favorite browser (Google Chrome is highly recommanded) and you are good to go. Enjoy.
