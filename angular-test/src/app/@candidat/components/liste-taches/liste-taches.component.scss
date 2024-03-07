@@ -1,0 +1,151 @@
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);  // 4 colonnes par ligne
+  gap: 20px; // Espace entre les cartes (ajustez selon vos préférences)
+}
+
+.card {
+  // border: 1px solid black;
+  background-color: #dedddf;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  max-width: 100%;
+  margin: 1rem;  // Espace en bas pour séparer les cartes
+}
+
+
+
+.card:hover, button:hover {
+  transform: scale(1.05); /* Augmente la taille de la carte de 5% au survol */
+  transition: transform 0.3s ease; /* Ajoute une transition douce pour un effet fluide */
+}
+
+.completed{
+  text-decoration: line-through;
+}
+
+.completed-sous-tache{
+  text-decoration: line-through;
+}
+
+.task-header {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);  // 4 colonnes par ligne
+  border-bottom: 2px solid #959595;
+  gap: 20px; // Espace entre les cartes (ajustez selon vos préférences)
+  font-weight: bold;
+  align-items: center;
+  word-wrap: break-word;
+  white-space: normal;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.checkbox {
+  width: 24px;
+  height: 24px;
+  fill: #5ebd5e;
+  cursor: pointer;
+}
+
+
+span {
+  font-size: 18px;
+  display: flex; // Permet aux éléments d'être sur la même ligne
+  align-items: center; // Aligne les éléments verticalement
+}
+
+.task-actions {
+
+  display: flex;
+  justify-content: flex-end; // Aligner les boutons tout à droite
+
+  .svg {
+    margin-right: 8px; // Marge à droite pour séparer la case à cocher du titre
+    color:#5ebd5e;
+  }
+
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .delete {
+    width: 20px;
+    height: auto;
+    align-self: end;
+  }
+
+  // ... (votre style existant)
+}
+
+.sous-tache-checkbox {
+  margin-right: 8px;  // Ajoutez une marge à droite pour séparer la checkbox du texte
+}
+
+.checkbox {
+  width: 24px;
+  height: 24px;
+  fill: #5ebd5e;
+  cursor: pointer;
+}
+
+.sous-tache-title {
+  grid-column: span 4;
+}
+
+.sous-taches {
+  // ... (votre style existant)
+  
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);  // 4 colonnes par ligne
+  gap: 20px; // Espace entre les cartes (ajustez selon vos préférences)
+  word-wrap: break-word;
+  white-space: normal;
+
+  .sous-tache {
+    display: flex;
+    margin-bottom: 8px;
+
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    svg {
+      width: 20px;
+      height: auto;
+      margin-right: 8px;
+    }
+
+    span {
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      text-align: left; // Ajustez selon vos besoins
+    }
+  }
+  .sous-tache-button {
+    grid-column: 6;  // Aligner le bouton à la 6e colonne
+  }
+}
+
+.priority-low {
+  border-bottom: 20px solid #ab2638;
+}
+
+.priority-medium {
+  border-bottom: 20px solid rgb(255, 207, 119);
+}
+
+.priority-high {
+  border-bottom: 20px solid rgb(111, 206, 111);
+}

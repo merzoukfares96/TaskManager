@@ -1,0 +1,31 @@
+<!-- formulaire.component.html -->
+<form (ngSubmit)="validateForm()" class="from-group">
+  <div class="form">
+      <input type="text" placeholder="Titre de la tâche" id="title" name="title" class="form-control" [(ngModel)]="newTaskTitle" required>
+    <div class="input-container" (mouseenter)="showPopup = true" (mouseleave)="showPopup = false">
+      <input type="text" placeholder="Sous-tâches" class="form-control" id="sousTaches" name="sousTaches" [(ngModel)]="newTaskSousTaches" required>
+      <span *ngIf="showPopup" class="popup">
+        <!-- Contenu du pop-up -->
+        <span style="font-weight: bold;">Important : </span>Veuillez séparer chaque sous-tâche par une virgule et un espace ", ".
+      </span>
+    </div>
+    <!-- <div>
+      <input type="text" placeholder="Sous-tâches" class="form-control" id="sousTaches" name="sousTaches" [(ngModel)]="newTaskSousTaches" required>
+    </div> -->
+    <div>
+      <select id="priority" class="form-control" name="priority" [(ngModel)]="newTaskPriority" required>
+        <option value="0">Priorité haute</option>
+        <option value="1">Priorité moyenne</option>
+        <option value="2">Priorité basse</option>
+      </select>
+    </div>
+    <div class="buttons">
+      <!-- Ajoutez un bouton Annuler qui émet un événement -->
+      <button type="button" class="button-cancel" style="margin:1rem" (click)="cancel.emit()">Annuler</button>
+      <!-- <button type="button" class="button-cancel" style="margin:1rem" (click)="cancel">Annuler</button> -->
+      <button type="submit" class="button-success">{{ editedTask ? 'Éditer' : 'Ajouter' }} la tâche</button>
+    </div>
+  </div>
+    
+  </form>
+  
