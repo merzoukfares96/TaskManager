@@ -23,9 +23,9 @@
         </div>
 
         <div>
-            <div *ngFor="let sousTache of task.sousTaches" class="sous-taches">
+            <div *ngFor="let sousTache of task.sousTaches" class="sous-taches" (click)="toggleSousTacheCompletion(task, sousTache)">
                 <div class="sous-tache-checkbox">
-                    <input class="checkbox" type="checkbox" [(ngModel)]="sousTache.completed" (click)="toggleSousTacheCompletion(task, sousTache)">
+                    <input class="checkbox" type="checkbox" [(ngModel)]="sousTache.completed">
                 </div>
                 <div class="sous-tache-title" [ngClass]="{ 'completed-sous-tache': sousTache.completed, 'priority-class': true }">{{sousTache.title}}</div>
                 <div class="task-actions sous-tache-button">
